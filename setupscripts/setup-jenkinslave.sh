@@ -9,8 +9,11 @@ sudo apt-get install -y $java_ver
 echo "INSTALLED JAVA................." 
 java -version
 
-#jenkins
+#jenkins user creation
 useradd -d /var/lib/jenkins  -s /bin/bash jenkins
 mkdir /var/lib/jenkins
 chown jenkins: /var/lib/jenkins
+
+#create ssh key 
+runuser -l  jenkins  -c 'ssh-keygen -t rsa -N "" -f ~/.ssh/id_rsa <<< y'
 
