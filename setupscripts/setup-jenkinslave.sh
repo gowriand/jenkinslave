@@ -9,3 +9,8 @@ sudo apt-get install -y $java_ver
 echo "INSTALLED JAVA................." 
 java -version
 
+#jenkins
+useradd -d /var/lib/jenkins  -s /bin/bash jenkins
+mkdir /var/lib/jenkins
+chown jenkins: /var/lib/jenkins
+
