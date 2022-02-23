@@ -16,5 +16,5 @@ chown jenkins: /var/lib/jenkins
 
 #create ssh key 
 runuser -l  jenkins  -c 'ssh-keygen -t rsa -N "" -f ~/.ssh/id_rsa <<< y'
-runuser -l  jenkins  -c 'cp ssh/id_rsa.pub /var/lib/jenkins/.ssh/authorized_keys'
-
+#runuser -l  jenkins  -c 'cp ssh/id_rsa.pub /var/lib/jenkins/.ssh/authorized_keys'
+runuser -l  jenkins  -c 'cp /jenkinslave/setupscripts/ssh/id_rsa.pub /var/lib/jenkins/.ssh/authorized_keys'
